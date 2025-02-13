@@ -107,9 +107,12 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Web Development', description: 'HTML5, CSS3, JavaScript React Js, Next Js, JavaScript' },
+    { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'Software Development', description: 'Python3, Bash, PowerShell' },
+    { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'Databases', description: 'MySQL' },
+    { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'System Administration', description: 'Linux, Windows, VMWare, SSH' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Computer Information Technology Diploma (In Progress), British Columbia Institute of Technology (BCIT)' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: '' }
 ];
 
 export const toolsData = [

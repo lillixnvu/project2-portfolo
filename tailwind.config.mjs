@@ -63,6 +63,10 @@ export default {
   				'sans-serif'
   			]
   		},
+		boxShadow: {
+			'black': '4px 4px 0 #000',
+			'white': '4px 4px 0 #fff',
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
