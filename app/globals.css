@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+.defaultFont {
   font-family: 'montserrat', sans-serif;
+}
+
+.headerFont {
+  font-family: 'bebas neue', sans-serif !important;
 }
 
 @layer base {
