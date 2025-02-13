@@ -1,7 +1,23 @@
-import React from 'react'
+import { assets } from '@/assets/assets';
+import Image from 'next/image';
+import React, { useRef } from 'react'
 
 const Navbar = () => {
-    return (
+    const sideMenuRef = useRef();
+
+    const openMenu = () => {
+        sideMenuRef.current.style.transform = 'translateX(-16rem)';
+    }
+
+    const closeMenu = () => {
+        sideMenuRef.current.style.transform = 'translateX(16rem)';
+    }
+
+    return ( 
+        <>
+        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]'>
+            <Image src={assets.header_bg_color} alt='' className='w-full'></Image>
+        </div>
             <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] text-1 py-4 flex items-center justify-between z-50">
         
             <h1>
@@ -14,15 +30,43 @@ const Navbar = () => {
             <li><a href="#about">About Me</a></li>
             <li><a href="#work">My Work</a></li>
             <li><a href="#contact">Contact</a></li>
-            {/* <li><a href="/login">Login</a></li>  */}
             </ul>
 
-            <div>
-                <button className="bg-white text-black border border-black border-solid font-bold py-2 px-4 rounded transition-colors duration-300 hover:bg-black hover:text-white">
-                    <a href="/login">Login</a>
+            <div className='flex items-center gap-4'>
+
+                <button>
+                    <Image src={assets.moon_icon} alt='moon icon' className='size-6 mr-1'></Image>
                 </button>
+
+                <button
+                className="hidden lg:flex items-center gap-3 border-[1.6px] border-[#616467] text-black px-3 py-1 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
+                <a href="/login">Login</a>
+                </button>
+
+                <button className='block md:hidden ml-3' onClick={openMenu}>
+                    <Image src={assets.menu_black} alt='moon icon' className='size-5 mr-2.5'></Image>
+                </button>
+            
+                
             </div>
+
+            {/* mobile menu */}
+
+            <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-purple-50 transition duration-500'>
+
+            <div className='absolute right-6 top-6' onClick={closeMenu}>
+                <Image src={assets.close_black} alt='close_black' className='w-5 cursor-pointer'></Image>
+            </div>
+            <li><a onClick={closeMenu} href="#home">Home</a></li>
+            <li><a onClick={closeMenu} href="#about">About Me</a></li>
+            <li><a onClick={closeMenu} href="#work">My Work</a></li>
+            <li><a onClick={closeMenu} href="#contact">Contact</a></li>
+            <li><a onClick={closeMenu} href="/login">Login</a></li>
+
+            </ul>
+
         </nav>
+    </>
     );
   };
   
