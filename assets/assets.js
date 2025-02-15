@@ -6,13 +6,10 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
-import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
-import logo from './logo.png';
-import logo_dark from './logo_dark.png';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
@@ -45,13 +42,10 @@ export const assets = {
     project_icon,
     project_icon_dark,
     vscode,
-    firebase,
     figma,
     git,
     mongodb,
     right_arrow_white,
-    logo,
-    logo_dark,
     mail_icon,
     mail_icon_dark,
     profile_img,
@@ -78,43 +72,37 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'ParkYourAssignment',
+        description: 'Student assignment tracker.',
         bgImage: '/work-1.png',
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'DigitalOcean Instructions',
+        description: 'Setting up and configuring with doctl and cloud-init.',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'Bash Shell Scripting',
+        description: 'Automating package installation, configuration and new user creation.',
         bgImage: '/work-3.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'Caddy Web Server',
+        description: 'Setting up a web server with Caddy.',
         bgImage: '/work-4.png',
     },
 ]
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Web Development', description: 'HTML5, CSS3, JavaScript React Js, Next Js, JavaScript' },
     { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'Software Development', description: 'Python3, Bash, PowerShell' },
-    { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'Databases', description: 'MySQL' },
+    { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'Databases', description: 'MySQL, SQLite' },
     { icon: assets.code_icon, iconDark: assets.edu_icon_dark, title: 'System Administration', description: 'Linux, Windows, VMWare, SSH' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Computer Information Technology Diploma (In Progress), British Columbia Institute of Technology (BCIT)' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: '' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Current Projects', description: 'Exploring cloud computing with AWS, configuration with Windows Server, and creating a web server with Caddy' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.figma, assets.git
 ];

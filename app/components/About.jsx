@@ -1,5 +1,6 @@
-import { assets, infoList } from '@/assets/assets'
+import { assets, infoList, toolsData } from '@/assets/assets'
 import Image from 'next/image'
+import { list } from 'postcss'
 import React from 'react'
 
 const About = () => {
@@ -8,7 +9,7 @@ const About = () => {
       <h4 className='text-center mb-2 text-lg'>Introduction</h4>
       <h2 className='text-center text-5xl headerFont'>About Me</h2>
 
-      <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+      <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-8'>
             <div className='w-64 sm:w-80 rounded-3xl max-w-none'>
                 <Image src={assets.user_image} alt='user' className='w-full rounded-3xl'></Image>
             </div>
@@ -23,6 +24,17 @@ const About = () => {
                             <p className='text-gray-600 text-sm'>{description}</p>
                         </li>
                     ))}
+                </ul>
+                <h4 className='my-6 text-gray-700 headerFont text-2xl'>Tools I use:</h4>
+                <ul className='flex items-center gap-3 sm:gap-5'>
+                  {toolsData.map((tool, index)=>((
+                    <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-black'
+                    key={index}>
+                      
+                      <Image src={tool} alt='Tool' className='w-5 sm:w-7'></Image>
+                    </li>
+
+                  )))}
                 </ul>
             </div>
       </div>

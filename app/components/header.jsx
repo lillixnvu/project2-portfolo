@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const header = () => {
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col  items-center justify-center gap-4 defaultFont'>
+    <div id='home' className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col  items-center justify-center gap-4 defaultFont'>
       <div>
         <Image src={assets.profile_img} alt='' className='rounded-full w-32'></Image>
       </div>
@@ -18,7 +18,7 @@ const header = () => {
       </div>
 
       <p className='max-w-2xl mx-auto'>
-        I am a current student at BCIT, studying Computer Information Technology. I am passionate about technology and I am always looking for ways to improve my skills.
+        I'm a current student at BCIT, studying Computer Information Technology. Passionate about technology and I am always looking for ways to improve my skills.
       </p>
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
         <a href="#contact" 
