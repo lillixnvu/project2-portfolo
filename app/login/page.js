@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { assets } from '@/assets/assets';
+
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -21,7 +24,7 @@ const LoginPage = () => {
     const userCredentials = { email: 'user@example.com', password: 'password123' };
 
     if (email === userCredentials.email && password === userCredentials.password) {
-      router.push('/dashboard');
+      router.push('/');
     } else {
       setError('Invalid credentials. Please try again.');
     }
@@ -29,6 +32,11 @@ const LoginPage = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
+      <div className=''>
+        <Image src={assets.moon_icon} alt="moon icon" width={50} height={50}>
+
+        </Image>
+      </div>
       <div className="w-full max-w-sm p-6 border rounded-md shadow-md">
         <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
         {error && <p className="text-red-500 text-center">{error}</p>}

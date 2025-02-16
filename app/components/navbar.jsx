@@ -56,7 +56,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
 
                 <button
                 className="hidden lg:flex items-center gap-3 border-[1.6px] border-[#616467] text-black px-3 py-1 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-                <a href="#contact">Contact</a>
+                <a href="/login">Login</a>
                 </button>
 
                 <button className='block md:hidden ml-3' onClick={openMenu}>
@@ -79,6 +79,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <li><a onClick={closeMenu} href="#about">About Me</a></li>
             <li><a onClick={closeMenu} href="#work">My Work</a></li>
             <li><a onClick={closeMenu} href="#contact">Contact</a></li>
+            <li><a onClick={closeMenu} href="/login">Login</a></li>
 
             </ul>
 
