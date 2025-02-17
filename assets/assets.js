@@ -91,6 +91,16 @@ export const workData = [
         description: 'Setting up a web server with Caddy.',
         bgImage: '/work-4.png',
     },
+    {
+        title: 'AWS Cloud Computing',
+        description: 'Exploring cloud computing with AWS.',
+        bgImage: '/work-5.png',
+    },
+    {
+        title: 'Windows Server',
+        description: 'Configuration with Windows Server.',
+        bgImage: '/work-6.png',
+    }
 ]
 
 
