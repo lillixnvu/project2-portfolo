@@ -24,6 +24,19 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         router.push('/login');
     }
 
+    useEffect(() => {
+
+        const loginStatus = localStorage.getItem('isLoggedIn') === 'true';
+        setIsLoggedIn(loginStatus);
+
+        window.addEventListener('scroll', () => {
+            if (scrollY > 50) {
+                setIsScroll(true)
+            } else {
+                setIsScroll(false)
+            }
+        })
+    }, [])
 
     return (
         <>
@@ -49,11 +62,18 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                         <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='mode toggle icon' className='size-6 mr-1'></Image>
                     </button>
 
+                    {isLoggedIn ? (
+                        <button
+                            onClick={handleLogout}
+                            className="hidden lg:flex items-center gap-3 border-[1.6px] border-red-500 text-red-500 px-3 py-1 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-red-500 hover:text-white dark:text-red-400 dark:border-red-400 dark:hover:text-white transition duration-200">
+                            Logout
+                        </button>
+                    ) : (
                         <button
                             className="hidden lg:flex items-center gap-3 border-[1.6px] border-[#616467] text-black px-3 py-1 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200">
-                            <a href="#contact">Contact Me</a>
+                            <a href="/login">Login</a>
                         </button>
-                
+                    )}
 
                     <button className='block md:hidden ml-3' onClick={openMenu}>
                         <div>
@@ -71,7 +91,12 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
                     <li><a onClick={closeMenu} href="#about">About Me</a></li>
                     <li><a onClick={closeMenu} href="#work">My Work</a></li>
                     <li><a onClick={closeMenu} href="#contact">Contact</a></li>
-                
+                    
+                    {isLoggedIn ? (
+                        <li><button onClick={() => { handleLogout(); closeMenu(); }} className="text-red-500">Logout</button></li>
+                    ) : (
+                        <li><a onClick={closeMenu} href="/login">Login</a></li>
+                    )}
                 </ul>
             </nav>
         </>
