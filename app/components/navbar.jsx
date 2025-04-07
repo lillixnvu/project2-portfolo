@@ -1,4 +1,4 @@
-import { assets } from '@/assets/assets';
+import { assets } from '../../assets/assets';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';

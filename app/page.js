@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
@@ -11,18 +10,6 @@ import Footer from './components/Footer';
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const router = useRouter();
-
-  // Check login status
-  useEffect(() => {
-    const loggedIn = localStorage.getItem('isLoggedIn');
-    if (!loggedIn) {
-      router.push('/login');
-    } else {
-      setIsLoggedIn(true);
-    }
-  }, []);
 
   // Theme handling
   useEffect(() => {
@@ -42,10 +29,6 @@ export default function Home() {
       localStorage.removeItem('theme');
     }
   }, [isDarkMode]);
-
-  if (!isLoggedIn) {
-    return null; // Render nothing until the login check completes
-  }
 
   return (
     <>

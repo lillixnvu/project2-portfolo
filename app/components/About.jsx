@@ -1,4 +1,4 @@
-import { assets, infoList, toolsData } from '@/assets/assets'
+import { assets, infoList, toolsData } from '../../assets/assets'
 import Image from 'next/image'
 import { list } from 'postcss'
 import React from 'react'
