@@ -18,6 +18,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         sideMenuRef.current.style.transform = 'translateX(16rem)';
     }
 
+    const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        setIsLoggedIn(false);
+        router.push('/login');
+    }
+
+
     return (
         <>
             <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>

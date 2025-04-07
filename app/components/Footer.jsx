@@ -17,12 +17,11 @@ function Footer() {
 
       <div  className='text-center sm:flex items:center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
         <p>© 2025 Lillian Vu. All rights reserved.</p>
-        
-        <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-          <li><a href="https://github.com/lillixnvu" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/lillian-vu-0b110032a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
 
+        <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
+            <li><a target='_blank' href="https://github.com/lillixnvu"></a>GitHub</li>
+            <li><a target='_blank' href="https://www.linkedin.com/in/lillian-vu-0b110032a/"></a>LinkedIn</li>
+        </ul>
       </div>
 
 
